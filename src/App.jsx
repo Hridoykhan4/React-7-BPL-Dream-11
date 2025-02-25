@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Banner from "./components/Header/Banner/Banner";
 import Header from "./components/Header/Header";
 import PlayerContainer from "./components/playerContainer/PlayerContainer";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   const [active, setActive] = useState(true);
@@ -15,7 +15,6 @@ function App() {
     <>
       <Header></Header>
       <Banner></Banner>
-
       <main className="max-w-[1440px] w-11/12 mx-auto">
         <PlayerContainer
           handleIsActive={handleIsActive}
