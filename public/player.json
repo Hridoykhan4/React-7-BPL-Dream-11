@@ -1,0 +1,142 @@
+[
+  {
+    "playerId": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://media.gettyimages.com/id/1472909629/photo/ahmedabad-india-virat-kohli-of-india-celebrates-after-scoring-his-century-during-day-four-of.jpg?s=612x612&w=0&k=20&c=FRS6QUbu-RZ8UMBYe0iU2UINh0aS1oKx77YY0JjyU5k=",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2500000
+  },
+  {
+    "playerId": 2,
+    "name": "Steve Smith",
+    "country": "Australia",
+    "image": "https://i.ibb.co/Fx7MM23/smith.jpg",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Leg spin",
+    "biddingPrice": 2300000
+  },
+  {
+    "playerId": 3,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "image": "https://i.ibb.co/P19LsjY/gettyimages-1982878048-612x612.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 2000000
+  },
+  {
+    "playerId": 4,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/Z1kdGvs/kane.jpg",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off spin",
+    "biddingPrice": 2200000
+  },
+  {
+    "playerId": 5,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://i.ibb.co/S7gxv7h/gettyimages-1409776304-612x612.jpg",
+    "role": "All-rounder",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2400000
+  },
+  {
+    "playerId": 6,
+    "name": "David Warner",
+    "country": "Australia",
+    "image": "https://i.ibb.co/RghSnz1/warner.jpg",
+    "role": "Batsman",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm leg spin",
+    "biddingPrice": 2100000
+  },
+  {
+    "playerId": 7,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/9Y4b1Kx/boult.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Left-arm fast",
+    "biddingPrice": 1900000
+  },
+  {
+    "playerId": 8,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co/fnmNfnR/rashid.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm leg spin",
+    "biddingPrice": 2000000
+  },
+  {
+    "playerId": 9,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://i.ibb.co/ZWt6vww/gettyimages-2147859721-612x612.jpg",
+    "role": "Wicketkeeper-Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2300000
+  },
+  {
+    "playerId": 10,
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "image": "https://i.ibb.co/N98s64S/gettyimages-2158350575-612x612.jpg",
+    "role": "All-rounder",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 2500000
+  },
+  {
+    "playerId": 11,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co/YkmmJTb/gettyimages-1636796092-612x612.jpg",
+    "role": "All-rounder",
+    "battingType": "Left-handed",
+    "bowlingType": "Left-arm orthodox",
+    "biddingPrice": 2200000
+  },
+  {
+    "playerId": 12,
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "image": "https://i.ibb.co/9ZcS7mL/gettyimages-1753924517-612x612.jpg",
+    "role": "Wicketkeeper-Batsman",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2000000
+  },
+  {
+    "playerId": 13,
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "image": "https://i.ibb.co/dJ0MDKP/gettyimages-2158799630-612x612.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 2100000
+  },
+  {
+    "playerId": 14,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "image": "data:image/webp;base64,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",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off spin",
+    "biddingPrice": 2300000
+  }
+]
