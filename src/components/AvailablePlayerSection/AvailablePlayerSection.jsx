@@ -5,13 +5,18 @@ import { FaFlag, FaUser } from "react-icons/fa";
 const AvailablePlayerSection = ({ handleChoosePlayer }) => {
   const [players, setPlayers] = useState([]);
   const [temp, setTemp] = useState([]);
+  const [spinner, setSpinner] = useState(false);
   useEffect(() => {
+    setSpinner(true);
+
     fetch("player.json")
       .then((res) => res.json())
       .then((data) => {
         setPlayers(data);
         setTemp(data);
-      });
+      })
+      .catch((error) => console.error("Error fetching players:", error))
+      .finally(() => setSpinner(false));
   }, []);
 
   const handleSearch = (e) => {
@@ -60,6 +65,15 @@ const AvailablePlayerSection = ({ handleChoosePlayer }) => {
           />
         </label>
       </div>
+
+      {spinner && (
+        <div className="my-10">
+          <span className="loading loading-ball loading-md"></span>
+          <span className="loading loading-ball loading-lg"></span>
+          <span className="loading loading-ball loading-xl"></span>
+        </div>
+      )}
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-7">
         {players.map((player) => (
           <div

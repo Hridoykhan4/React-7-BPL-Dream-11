@@ -98,12 +98,18 @@ function App() {
     }
   };
 
+  /* 
+    setBudget((prev) => prev + money);
+  
+  */
+
   const handleRemove = (id) => {
     const findName = cartPlayer.find((player) => player.playerId === id);
+    setBudget((prev) => prev + findName.biddingPrice);
     const remaining = cartPlayer.filter((player) => player.playerId !== id);
     toast.warn(`${findName.name} is out of your squad`, {
       position: "top-right",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

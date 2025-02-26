@@ -8,6 +8,7 @@ const PlayerContainer = ({
   handleChoosePlayer,
   cartPlayer,
 }) => {
+
   return (
     <section className="mt-8">
       <div className="flex gap-7 justify-end sticky top-20 z-40">
@@ -34,7 +35,11 @@ const PlayerContainer = ({
             handleChoosePlayer={handleChoosePlayer}
           ></AvailablePlayerSection>
         ) : (
-          <SelectedPlayers handleRemove={handleRemove} handleIsActive={handleIsActive} cartPlayer={cartPlayer}></SelectedPlayers>
+          <SelectedPlayers
+            handleRemove={handleRemove}
+            handleIsActive={handleIsActive}
+            cartPlayer={cartPlayer}
+          ></SelectedPlayers>
         )}
       </div>
     </section>
