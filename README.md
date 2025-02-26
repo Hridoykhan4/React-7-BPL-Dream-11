@@ -1,5 +1,6 @@
 # Project name and Live Link
-BPL Dream 11 
+[BPL Dream 11 - Live](https://new-sick-man.surge.sh/)
+
 
 # Description:
 A websit where users can view, select, and manage a roster of T20 cricket players for a tournament. Users can earn coins to "hire" players, see available and selected players, and manage selections with a budget and validation features

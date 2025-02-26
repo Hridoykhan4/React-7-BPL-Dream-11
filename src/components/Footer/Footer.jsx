@@ -1,8 +1,10 @@
+import footerMain from "/src/assets/logo-footer.png";
+
 const Footer = () => {
   return (
  <div className="bg-black text-white pb-10 pt-32 px-10">
         <div className="flex sm:justify-center mb-7">
-            <img className="w-32" src={'/src/assets/logo-footer.png'} alt="" />
+            <img className="w-32" src={footerMain} alt="" />
         </div>
 
        <footer className="footer ">
