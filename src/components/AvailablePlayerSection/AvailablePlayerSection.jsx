@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { FaFlag, FaUser } from "react-icons/fa";
 
-const AvailablePlayerSection = () => {
+const AvailablePlayerSection = ({ handleChoosePlayer }) => {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
@@ -50,13 +51,22 @@ const AvailablePlayerSection = () => {
               <p className="text-gray-600 font-medium">
                 Price: ${player?.biddingPrice}
               </p>
-              <button>Choose Player</button>
+              <button
+                onClick={() => handleChoosePlayer(player)}
+                className="btn bg-sky-300"
+              >
+                Choose Player
+              </button>
             </div>
           </div>
         </div>
       ))}
     </div>
   );
+};
+
+AvailablePlayerSection.propTypes = {
+  handleChoosePlayer: PropTypes.func,
 };
 
 export default AvailablePlayerSection;

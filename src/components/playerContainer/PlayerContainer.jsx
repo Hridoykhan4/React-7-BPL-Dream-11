@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 import SelectedPlayers from "../SelectedPlayers/SelectedPlayers";
 import AvailablePlayerSection from "../AvailablePlayerSection/AvailablePlayerSection";
-const PlayerContainer = ({ active, handleIsActive }) => {
+const PlayerContainer = ({
+  handleRemove,
+  active,
+  handleIsActive,
+  handleChoosePlayer,
+  cartPlayer,
+}) => {
   return (
-    <section className="my-8">
-      <div className="flex gap-7 justify-end">
+    <section className="mt-8">
+      <div className="flex gap-7 justify-end sticky top-20 z-40">
         <button
           onClick={() => handleIsActive(true)}
           className={`font-bold btn text-black text-lg ${
@@ -19,14 +25,16 @@ const PlayerContainer = ({ active, handleIsActive }) => {
             active || "btn-warning"
           }`}
         >
-          Selected (0)
+          Selected ({cartPlayer.length})
         </button>
       </div>
       <div className="my-5">
         {active ? (
-          <AvailablePlayerSection></AvailablePlayerSection>
+          <AvailablePlayerSection
+            handleChoosePlayer={handleChoosePlayer}
+          ></AvailablePlayerSection>
         ) : (
-          <SelectedPlayers></SelectedPlayers>
+          <SelectedPlayers handleRemove={handleRemove} handleIsActive={handleIsActive} cartPlayer={cartPlayer}></SelectedPlayers>
         )}
       </div>
     </section>
@@ -38,4 +46,7 @@ export default PlayerContainer;
 PlayerContainer.propTypes = {
   active: PropTypes.bool,
   handleIsActive: PropTypes.func,
+  handleChoosePlayer: PropTypes.func,
+  handleRemove: PropTypes.func,
+  cartPlayer: PropTypes.array,
 };

@@ -1,8 +1,9 @@
 import logo from "/src/assets/logo.png";
 import dollar from "/src/assets/dollar.png";
-const Header = () => {
+import PropTypes from "prop-types";
+const Header = ({budget}) => {
   return (
-    <header className="max-w-[1440px] py-2 sticky top-0 backdrop-blur-xl  z-20 bg-transparent w-11/12 mx-auto">
+    <header className="max-w-[1440px] py-2 sticky top-0 backdrop-blur-xl z-20 w-11/12 mx-auto">
       <nav className="flex justify-between items-center">
         <div>
           <img src={logo} alt="" />
@@ -23,7 +24,7 @@ const Header = () => {
             </li>
             <li className="bg-white">
               <button className="btn">
-                0 Coin <img className="w-5" src={dollar} alt="" />
+                {budget} Coin <img className="w-5" src={dollar} alt="" />
               </button>
             </li>
           </ul>
@@ -33,4 +34,8 @@ const Header = () => {
   );
 };
 
+
+Header.propTypes = {
+  budget: PropTypes.number
+}
 export default Header;
