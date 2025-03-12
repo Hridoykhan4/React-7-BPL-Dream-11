@@ -1,22 +1,38 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { FaFlag, FaUser } from "react-icons/fa";
+import { getStoredPlayers } from "../../utils/localstorage";
 
-const AvailablePlayerSection = ({ handleChoosePlayer }) => {
+const AvailablePlayerSection = ({ handleChoosePlayer, setCartPlayer }) => {
   const [players, setPlayers] = useState([]);
   const [temp, setTemp] = useState([]);
   const [spinner, setSpinner] = useState(false);
+
+  useEffect(() => {
+    if (players.length) {
+      const cartPlayer = getStoredPlayers();
+      const chosenPlayers = [];
+      for (const id of cartPlayer) {
+        const findCart = players.find((player) => player.playerId === id);
+        chosenPlayers.push(findCart);
+      }
+      setCartPlayer(chosenPlayers);
+    }
+  }, [players, setCartPlayer]);
+
   useEffect(() => {
     setSpinner(true);
 
     fetch("player.json")
       .then((res) => res.json())
       .then((data) => {
-        setPlayers(data);
-        setTemp(data);
+        setTimeout(() => {
+          setPlayers(data);
+          setTemp(data);
+          setSpinner(false);
+        }, 1500);
       })
-      .catch((error) => console.error("Error fetching players:", error))
-      .finally(() => setSpinner(false));
+      .catch((error) => console.error("Error fetching players:", error));
   }, []);
 
   const handleSearch = (e) => {
@@ -132,6 +148,7 @@ const AvailablePlayerSection = ({ handleChoosePlayer }) => {
 
 AvailablePlayerSection.propTypes = {
   handleChoosePlayer: PropTypes.func,
+  setCartPlayer: PropTypes.func,
 };
 
 export default AvailablePlayerSection;

@@ -6,6 +6,7 @@ import Banner from "./components/Banner/Banner";
 import { Bounce, Slide, toast } from "react-toastify";
 import NewsLetter from "./components/NewsLetter/NewsLetter";
 import Footer from "./components/Footer/Footer";
+import { addToLS, removeFromLS } from "./utils/localstorage";
 
 function App() {
   const [active, setActive] = useState(true);
@@ -67,6 +68,7 @@ function App() {
         );
       } else {
         setCartPlayer([...cartPlayer, sportMan]);
+        addToLS(sportMan.playerId);
         setBudget((prev) => prev - sportMan.biddingPrice);
         toast.success(`Congrats!! ${sportMan.name} is now in your squad`, {
           position: "top-left",
@@ -98,13 +100,9 @@ function App() {
     }
   };
 
-  /* 
-    setBudget((prev) => prev + money);
-  
-  */
-
   const handleRemove = (id) => {
     const findName = cartPlayer.find((player) => player.playerId === id);
+    removeFromLS(id);
     setBudget((prev) => prev + findName.biddingPrice);
     const remaining = cartPlayer.filter((player) => player.playerId !== id);
     toast.warn(`${findName.name} is out of your squad`, {
@@ -127,6 +125,7 @@ function App() {
       <Banner handleFreeCredit={handleFreeCredit}></Banner>
       <main className="max-w-[1440px] w-11/12 mx-auto">
         <PlayerContainer
+          setCartPlayer={setCartPlayer}
           handleRemove={handleRemove}
           cartPlayer={cartPlayer}
           handleChoosePlayer={handleChoosePlayer}

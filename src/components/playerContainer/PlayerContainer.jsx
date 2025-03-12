@@ -7,8 +7,8 @@ const PlayerContainer = ({
   handleIsActive,
   handleChoosePlayer,
   cartPlayer,
+  setCartPlayer,
 }) => {
-
   return (
     <section className="mt-8">
       <div className="flex gap-7 justify-end sticky top-20 z-40">
@@ -32,6 +32,7 @@ const PlayerContainer = ({
       <div className="my-5">
         {active ? (
           <AvailablePlayerSection
+            setCartPlayer={setCartPlayer}
             handleChoosePlayer={handleChoosePlayer}
           ></AvailablePlayerSection>
         ) : (
@@ -54,4 +55,5 @@ PlayerContainer.propTypes = {
   handleChoosePlayer: PropTypes.func,
   handleRemove: PropTypes.func,
   cartPlayer: PropTypes.array,
+  setCartPlayer: PropTypes.func,
 };
